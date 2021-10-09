@@ -51,7 +51,7 @@
                         </li>
                         <li class="nav_item">
                             <a href="#contact" class="nav_link">
-                                <i class="uil uil-message nav_icon"></i> Contactme
+                                <i class="uil uil-message nav_icon"></i> ContactMe
                             </a>
                         </li>
                     </ul>
@@ -145,7 +145,7 @@
                     </div>
 
                     <div class="about_buttons">
-                        <a download="" href="assets/pdf/Lav-Cv.pdf" class="button button--flex">
+                        <a download="" href="assets/pdf/Lav-Cv.pdf" target="_blank" class="button button--flex">
                             Download CV<i class="uil uil-file-download-alt button_icon"></i>
                         </a>
                     </div>
@@ -584,7 +584,7 @@
                                 <p class="portfolio_description">I invite you to visit my github where I have more projects and where you can see my progress as Frontend developer. Every projects have github page and links for them are in the file readme.md.
                                 </p>
                                 <a href="https://github.com/lavantonio" target="_blank" class="button button--flex button--small portfolio_button">
-                                    Go to the site
+                                    Go to the Github
                                     <i class="uil uil-arrow-right button-icon"></i>
                                 </a>
                             </div>
@@ -612,12 +612,12 @@
 
                 <div class="contact_container container grid">
                     <div>
-                        <a href="tel:0654546176">
+                        <a href="tel:+381654546176">
                           <div class="contact_information">
                               <i class="uil uil-phone contact_icon"></i>
                               <div>
                                 <h3 class="contact_title">Call Me</h3>
-                                <span class="contact_subtitle">065/4546176</span>
+                                <span class="contact_subtitle">+381 (0)65 454 6176</span>
                               </div>
                           </div>
                         </a>
@@ -636,27 +636,32 @@
                             </div>
                         </div>
                     </div>
-                    <form action="" class="contact_form grid">
+                    <!-- Poruka -->
+                    <div class="alert alert-success" style="display: none;">
+                        <strong>Poruka je uspešno prosleđena!</strong> Hvala na interesovanju.
+                    </div>
+                    <form action="https://formsubmit.co/lavnatoniovalda@gmail.com" method="POST" class="contact_form grid" id="contact-form">
                         <div class="contact_inputs grid">
                             <div class="contact_content">
-                                <label for="" class="contact_label">Name</label>
-                                <input type="text" class="contact_input">
+                                <label for="SenderName" class="contact_label">Name</label>
+                                <input name="name" type="text" class="contact_input" id="SenderName" required>
                             </div>
                             <div class="contact_content">
-                                <label for="" class="contact_label">Email</label>
-                                <input type="email" class="contact_input">
+                                <label for="SenderEmail" class="contact_label">Email</label>
+                                <input type="email" name="email" class="contact_input" id="SenderEmail" required>
                             </div>
                         </div>
                         <div class="contact_content">
-                            <label for="" class="contact_label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                            <label for="SenderMessage" class="contact_label">Message</label>
+                            <textarea type="text" name="messsage" id="SenderMesssage" cols="0" rows="7" class="contact_input" required></textarea>
                         </div>
-
+                        <input type="hidden" name="_subject" value="New mail for site portfolio!">
+                        <input type="hidden" name="_next" value="https://lavantonio.github.io/Portfolio/thankyou.html">
                         <div>
-                            <a href="#" class="button button--flex">
+                            <button href="#contactme" class="button button--flex" type="submit">
                                 Send message
                                 <i class="uil uil-message button_icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -709,5 +714,6 @@
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
+
     </body>
 </html>
