@@ -367,6 +367,7 @@ img{
     padding:1rem;
     border-radius: .5rem;
     font-weight: var(--font-medium);
+    cursor: pointer;
 }
 
 .button:hover{
@@ -1003,6 +1004,25 @@ input:-webkit-autofill{
     color: #FFF;
 }
 
+/*========== Thank you ==========*/
+.body_thank_you{
+    margin-bottom: 0;
+}
+
+.thank_you{
+    height: 65vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.thank_you h1{
+    margin: auto 0;
+}
+
+.footer_thank_you{
+    height: 31vh;
+}
 /*========== SCROLL UP ==========*/
 .scrollup{
     position: fixed;
