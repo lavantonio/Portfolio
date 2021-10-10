@@ -368,6 +368,7 @@ img{
     border-radius: .5rem;
     font-weight: var(--font-medium);
     cursor: pointer;
+    border-color: transparent;
 }
 
 .button:hover{
