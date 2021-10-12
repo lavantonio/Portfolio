@@ -1239,9 +1239,9 @@ input:-webkit-autofill{
     .about_img{
         width: 350px;
     }
-    .about_info{
+    /* .about_info{
         justify-content: space-between;
-    }
+    } */
     .about_buttons{
         justify-content: initial;
     }
