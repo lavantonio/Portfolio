@@ -156,13 +156,8 @@ themeButton.addEventListener('click', () => {
 // Kontakt forma
 $('#contact-form').validate({
     submitHandler: function (form) {
-
-
         // Onemogućavanje svih polja
         $('input, textarea, button').prop('disabled', true);
-        // Promena natpisa na dugmetu
-        $(form).find('button').text('Slanje u toku...');
 
-        // Slanje podataka iz forme putem AJAX metode
     }
 });
