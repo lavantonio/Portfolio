@@ -157,11 +157,6 @@ themeButton.addEventListener('click', () => {
 $('#contact-form').validate({
     submitHandler: function (form) {
 
-        // Uzimanje podataka iz forme
-        var data = $(form).serialize();
-
-        // Uzimanje vrednosti iz action atributa
-        var action = $(form).prop('action');
 
         // Onemogućavanje svih polja
         $('input, textarea, button').prop('disabled', true);
@@ -170,8 +165,6 @@ $('#contact-form').validate({
 
         // Slanje podataka iz forme putem AJAX metode
         $.post(
-            action,
-            data,
             function (response) {
                 console.log(response);
                 if (response == 1) {
