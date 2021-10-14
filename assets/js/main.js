@@ -164,23 +164,5 @@ $('#contact-form').validate({
         $(form).find('button').text('Slanje u toku...');
 
         // Slanje podataka iz forme putem AJAX metode
-        $.post(
-            function (response) {
-                console.log(response);
-                if (response == 1) {
-                    // Sakrij i ukloni formu
-                    $(form).slideUp(function () {
-                        $(this).remove();
-                    });
-                    // Prikaži da je poruka uspešno poslata
-                    $('.alert-success').slideDown();
-                } else if ( response != '') {
-                    // Ako poruka nije prosleđena - pokazaće se greška
-                    alert(response);
-                } else {
-                    alert('Serverska validacija nije prošla');
-                }
-            }
-        );
     }
 });
