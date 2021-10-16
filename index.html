@@ -145,8 +145,8 @@
                     </div>
 
                     <div class="about_buttons">
-                        <a download="" href="assets/pdf/Lav-Cv.pdf" target="_blank" class="button button--flex">
-                            Download CV<i class="uil uil-file-download-alt button_icon"></i>
+                        <a download="" href="assets/pdf/Lav-Antonio_Valda_Rajic--resume.pdf" target="_blank" class="button button--flex">
+                            Download Cv<i class="uil uil-file-download-alt button_icon"></i>
                         </a>
                     </div>
                 </div>
@@ -511,7 +511,7 @@
                                     <a href="https://github.com/lavantonio/React_knowledge_quiz" target="_blank">link.</a>
                                 </p>
                                 <a href="https://lavantonio.github.io/Deploy-React_knowledge_quiz/#/" target="_blank" class="button button--flex button--small portfolio_button">
-                                    Go to the website
+                                    Go to the Website
                                     <i class="uil uil-arrow-right button-icon"></i>
                                 </a>
                             </div>
@@ -526,7 +526,7 @@
                                     <a href="https://github.com/lavantonio/knowledge_quiz" target="_blank">link.</a>
                                 </p>
                                 <a href="https://lavantonio.github.io/knowledge_quiz" target="_blank" class="button button--flex button--small portfolio_button">
-                                    Go to the site
+                                    Go to the Website
                                     <i class="uil uil-arrow-right button-icon"></i>
                                 </a>
                             </div>
@@ -541,7 +541,7 @@
                                     <a href="https://github.com/lavantonio/Rolling_the_dice/" target="_blank">link.</a>
                                 </p>
                                 <a href="https://lavantonio.github.io/Rolling_the_dice/" target="_blank" class="button button--flex button--small portfolio_button">
-                                    Go to the site
+                                    Go to the Website
                                     <i class="uil uil-arrow-right button-icon"></i>
                                 </a>
                             </div>
@@ -556,7 +556,7 @@
                                     <a href="https://github.com/lavantonio/CreaTIVA" target="_blank">link.</a>
                                 </p>
                                 <a href="https://lavantonio.github.io/CreaTIVA/" target="_blank" class="button button--flex button--small portfolio_button">
-                                    Go to the site
+                                    Go to the Website
                                     <i class="uil uil-arrow-right button-icon"></i>
                                 </a>
                             </div>
@@ -571,7 +571,7 @@
                                     <a href="https://github.com/lavantonio/Pokreni-se" target="_blank">link.</a>
                                 </p>
                                 <a href="https://lavantonio.github.io/Pokreni-se" target="_blank" class="button button--flex button--small portfolio_button">
-                                    Go to the site
+                                    Go to the Website
                                     <i class="uil uil-arrow-right button-icon"></i>
                                 </a>
                             </div>
@@ -641,22 +641,26 @@
                         <div class="contact_inputs grid">
                             <div class="contact_content">
                                 <label for="SenderName" class="contact_label">Name</label>
-                                <input name="name" type="text" class="contact_input" id="SenderName" required>
+                                <input name="name" type="text" class="contact_input" id="SenderName" >
+                                <label id="nameError"></label>
                             </div>
                             <div class="contact_content">
                                 <label for="SenderEmail" class="contact_label">Email</label>
-                                <input type="email" name="email" class="contact_input" id="SenderEmail" required>
+                                <input type="email" name="email" class="contact_input" id="SenderEmail" >
+                                <label id="emailError"></label>
+                                <label id="emailValidError"></label>
                             </div>
                         </div>
                         <div class="contact_content">
                             <label for="SenderMessage" class="contact_label">Message</label>
-                            <textarea type="text" name="messsage" id="SenderMesssage" cols="0" rows="7" class="contact_input" required></textarea>
+                            <textarea type="text" name="messsage" id="SenderMesssage" cols="0" rows="7" class="contact_input" ></textarea>
+                            <label id="textareaError"></label>
                         </div>
                         <input type="hidden" name="_subject" value="New mail for site portfolio!">
                         <input type="hidden" name="_next" value="https://lavantonio.github.io/Portfolio/thankyou.html">
                         <input type="hidden" name="_captcha" value="false">
                         <div>
-                            <button href="#contactme" class="button button--flex" type="submit">
+                            <button id="buttonSubmit" class="button button--flex" type="submit">
                                 Send message
                                 <i class="uil uil-message button_icon"></i>
                             </button>
@@ -710,13 +714,6 @@
         <!--==================== SWIPER JS ====================-->
         <script src="assets/js/swiper-bundle.min.js"></script>
 
-        <!--==================== JQUERY ====================-->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-
-        <!--==================== VALIDATE CONTAC ====================-->
-        <script src="./assets/js/jquery.validate.min.js"></script>
         
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>

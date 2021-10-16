@@ -153,11 +153,53 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-// Kontakt forma
-$('#contact-form').validate({
-    submitHandler: function (form) {
-        // Onemogućavanje svih polja
-        $('input, textarea, button').prop('disabled', true);
+// Contact form
 
+const name = document.getElementById('SenderName');
+const email = document.getElementById('SenderEmail');
+const message = document.getElementById('SenderMesssage');
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const emailValidError = document.getElementById('emailValidError');
+const messageError = document.getElementById('textareaError');
+const form = document.getElementById('buttonSubmit');
+
+
+form.addEventListener('click', (e) => {
+    let messagesName = [];
+    let messagesEmail = [];
+    let messagesValidEmail = [];
+    let messagesMessage = [];
+
+    //Error message for name
+    if (name.value === '' || name.value == null ) {
+      messagesName.push('Name is required');
     }
-});
+
+    //Error message for email
+    if (email.value === '' || email.value == null ) {
+        messagesEmail.push('Email is required');
+    }
+
+    if (false === validateEmail(email.value)) {
+        messagesValidEmail.push('Enter a valid email address');
+    }
+    
+    //Error message for textarea
+    if (message.value === '' || message.value == null ) {
+        messagesMessage.push('Message is required');
+    }
+
+    function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    if (messagesName.length > 0 || messagesEmail.length > 0 || messagesValidEmail.length > 0 || messagesMessage.length > 0) {
+      e.preventDefault()
+      nameError.innerText = messagesName.join(', ');
+      emailError.innerText = messagesEmail.join(', ');
+      emailValidError.innerText = messagesValidEmail.join(', ');
+      messageError.innerText = messagesMessage.join(', ');
+    }
+  })
