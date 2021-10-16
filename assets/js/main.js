@@ -178,13 +178,14 @@ form.addEventListener('click', (e) => {
 
     //Error message for email
     if (email.value === '' || email.value == null ) {
-        messagesEmail.push('Email is required');
+        messagesEmail.push('Email is required');  
+    }
+    else{
+        if (false === validateEmail(email.value)) {
+            messagesValidEmail.push('Enter a valid email address');
+        }     
     }
 
-    if (false === validateEmail(email.value)) {
-        messagesValidEmail.push('Enter a valid email address');
-    }
-    
     //Error message for textarea
     if (message.value === '' || message.value == null ) {
         messagesMessage.push('Message is required');
@@ -203,3 +204,5 @@ form.addEventListener('click', (e) => {
       messageError.innerText = messagesMessage.join(', ');
     }
   })
+
+  
